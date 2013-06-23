@@ -4,6 +4,13 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="1000">
-    <Canvas Background="SkyBlue"/>
+             Height="720" Width="5000">
+    <Canvas Background="SkyBlue">
+    	<Image Height="47" Canvas.Left="118" Source="assets/qMtqj1z.png" Stretch="Fill" Canvas.Top="34" Width="102"/>
+    	<Image Height="49" Canvas.Left="283" Source="assets/qMtqj1z.png" Stretch="Fill" Canvas.Top="88" Width="107"/>
+    	<Image Height="59" Canvas.Left="356" Source="assets/qMtqj1z.png" Stretch="Fill" Canvas.Top="101" Width="86"/>
+    	<Image Height="32" Canvas.Left="502" Source="assets/qMtqj1z.png" Stretch="Fill" Canvas.Top="64" Width="159"/>
+    	<Image Height="74" Canvas.Left="735" Source="assets/qMtqj1z.png" Stretch="Fill" Canvas.Top="132" Width="147"/>
+    	<Image Height="61" Canvas.Left="118" Source="assets/qMtqj1z.png" Stretch="Fill" Canvas.Top="187" Width="112"/>
+    </Canvas>
 </UserControl>
