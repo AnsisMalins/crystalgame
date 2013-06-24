@@ -11,7 +11,7 @@
     <Viewbox>
         <Grid Width="1280" Height="720" ClipToBounds="True">
             <ContentPresenter x:Name="World"/>
-            
+            <ContentPresenter x:Name="Hud"/>
             <ContentPresenter x:Name="Menu"/>
         </Grid>
     </Viewbox>

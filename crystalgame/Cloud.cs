@@ -26,7 +26,8 @@ namespace crystalgame
             if (!Entity.AreNearby(this, pegasus)) return;
             double distance = Distance(this, pegasus);
             if (distance > 0) return;
-            pegasus.Velocity += (pegasus.Position - Position) * -distance * Bounce * world.Speed;
+            pegasus.Velocity += Normal(pegasus.Position - Position)
+                * -distance * Bounce * world.Speed;
         }
 
         public static void SetBounce(FrameworkElement view, double value)
@@ -37,6 +38,6 @@ namespace crystalgame
 
         public static readonly DependencyProperty BounceProperty
             = DependencyProperty.RegisterAttached(
-            "Bounce", typeof(double), typeof(Cloud), new PropertyMetadata(1.0));
+            "Bounce", typeof(double), typeof(Cloud), new PropertyMetadata(100.0));
     }
 }

@@ -38,7 +38,7 @@
         <Image Canvas.Left="3687" Canvas.Top="1054" Height="200" Width="200"
         	Source="assets/cloud.png"
         	local:Entity.Type="{x:Type local:Cloud}"/>
-        <Image Canvas.Left="3687" Canvas.Top="1304.816" Height="200" Width="200"
+        <Image Canvas.Left="3679" Canvas.Top="1304.816" Height="200" Width="200"
         	Source="assets/cloud.png"
         	local:Entity.Type="{x:Type local:Cloud}"/>
         <Image Canvas.Left="3679" Canvas.Top="1526.184" Height="200" Width="200"

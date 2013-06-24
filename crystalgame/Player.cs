@@ -3,6 +3,7 @@ using Utilities;
 
 namespace crystalgame
 {
+    [DefaultView(typeof(HudView))]
     public class Player
     {
         private bool leftKeyDown;

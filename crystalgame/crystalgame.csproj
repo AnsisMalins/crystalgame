@@ -56,6 +56,9 @@
       <DependentUpon>CreditsView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Entity.cs" />
+    <Compile Include="HudView.xaml.cs">
+      <DependentUpon>HudView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Menu.cs" />
     <Compile Include="MenuView.xaml.cs">
       <DependentUpon>MenuView.xaml</DependentUpon>
@@ -76,6 +79,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="CreditsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HudView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
