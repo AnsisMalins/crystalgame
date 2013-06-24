@@ -143,12 +143,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="bgcloud.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="CEcastle.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -163,9 +157,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="assets\cloud.png" />
-    <Resource Include="cloud.png" />
-    <Resource Include="cloudringback.png" />
-    <Resource Include="cloudringfront.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="assets\dash.png" />

@@ -140,11 +140,11 @@
         <Image Canvas.Left="1775" Canvas.Top="2517" Height="200" Width="400"
         	Source="assets/cloud.png"
         	local:Entity.Type="{x:Type local:Cloud}" Stretch="Fill"/>
-        <Image Height="803.957" Canvas.Left="685" Source="pack://siteoforigin:,,,/bgcloud.png" Stretch="Fill" Canvas.Top="574.043" Width="1537" Panel.ZIndex="-6"/>
-        <Image Height="392.572" Canvas.Left="4019" Source="pack://siteoforigin:,,,/bgcloud.png" Stretch="Fill" Canvas.Top="1623.612" Width="1803.969" Panel.ZIndex="-6"/>
-        <Image Height="574" Canvas.Left="1464" Source="pack://siteoforigin:,,,/bgcloud.png" Stretch="Fill" Canvas.Top="1814.184" Width="779.785" Panel.ZIndex="-6"/>
-        <Image Height="1054" Source="pack://siteoforigin:,,,/CEcastle.png" Stretch="Fill" Canvas.Top="1663" Width="1054" Panel.ZIndex="-1" Canvas.Left="285"/>
-        <Image Height="303.159" Canvas.Left="4360.969" Source="pack://siteoforigin:,,,/bgcloud.png" Stretch="Fill" Canvas.Top="841" Width="527.031" RenderTransformOrigin="0.5,0.5" Panel.ZIndex="-6">
+        <Image Height="803.957" Canvas.Left="685" Source="assets/bgcloud.png" Stretch="Fill" Canvas.Top="574.043" Width="1537" Panel.ZIndex="-6"/>
+        <Image Height="392.572" Canvas.Left="4019" Source="assets/bgcloud.png" Stretch="Fill" Canvas.Top="1623.612" Width="1803.969" Panel.ZIndex="-6"/>
+        <Image Height="574" Canvas.Left="1464" Source="assets/bgcloud.png" Stretch="Fill" Canvas.Top="1814.184" Width="779.785" Panel.ZIndex="-6"/>
+        <Image Height="1054" Source="assets/CEcastle.png" Stretch="Fill" Canvas.Top="1663" Width="1054" Panel.ZIndex="-1" Canvas.Left="285"/>
+        <Image Height="303.159" Canvas.Left="4360.969" Source="assets/bgcloud.png" Stretch="Fill" Canvas.Top="841" Width="527.031" RenderTransformOrigin="0.5,0.5" Panel.ZIndex="-6">
         	<Image.RenderTransform>
         		<TransformGroup>
         			<ScaleTransform ScaleX="-1"/>
@@ -154,7 +154,7 @@
         		</TransformGroup>
         	</Image.RenderTransform>
         </Image>
-        <Image Height="585" Canvas.Left="3042" Source="pack://siteoforigin:,,,/bgcloud.png" Stretch="Fill" Canvas.Top="2888.816" Width="1798" RenderTransformOrigin="0.5,0.5" Panel.ZIndex="-6">
+        <Image Height="585" Canvas.Left="3042" Source="assets/bgcloud.png" Stretch="Fill" Canvas.Top="2888.816" Width="1798" RenderTransformOrigin="0.5,0.5" Panel.ZIndex="-6">
         	<Image.RenderTransform>
         		<TransformGroup>
         			<ScaleTransform ScaleX="-1"/>
@@ -164,9 +164,9 @@
         		</TransformGroup>
         	</Image.RenderTransform>
         </Image>
-        <Image Height="627.894" Canvas.Left="5868" Source="pack://siteoforigin:,,,/bgcloud.png" Stretch="Fill" Canvas.Top="149" Width="1128" Panel.ZIndex="-6"/>
-        <Image Height="564.868" Canvas.Left="7715" Source="pack://siteoforigin:,,,/bgcloud.png" Stretch="Fill" Canvas.Top="1215.098" Width="1378" Panel.ZIndex="-6"/>
-        <Image Height="726.121" Canvas.Left="6474" Source="pack://siteoforigin:,,,/bgcloud.png" Stretch="Fill" Canvas.Top="2136.184" Width="806" RenderTransformOrigin="0.5,0.5" Panel.ZIndex="-6">
+        <Image Height="627.894" Canvas.Left="5868" Source="assets/bgcloud.png" Stretch="Fill" Canvas.Top="149" Width="1128" Panel.ZIndex="-6"/>
+        <Image Height="564.868" Canvas.Left="7715" Source="assets/bgcloud.png" Stretch="Fill" Canvas.Top="1215.098" Width="1378" Panel.ZIndex="-6"/>
+        <Image Height="726.121" Canvas.Left="6474" Source="assets/bgcloud.png" Stretch="Fill" Canvas.Top="2136.184" Width="806" RenderTransformOrigin="0.5,0.5" Panel.ZIndex="-6">
         	<Image.RenderTransform>
         		<TransformGroup>
         			<ScaleTransform ScaleX="-1"/>
@@ -176,11 +176,11 @@
         		</TransformGroup>
         	</Image.RenderTransform>
         </Image>
-        <Image Height="1201" Canvas.Left="8328" Source="pack://siteoforigin:,,,/bgcloud.png" Stretch="Fill" Canvas.Top="2392.184" Width="2538" Panel.ZIndex="-6"/>
-        <Image Height="1201" Canvas.Left="2226" Source="pack://siteoforigin:,,,/bgcloud.png" Stretch="Fill" Canvas.Top="4518" Width="3994" Panel.ZIndex="-6"/>
-        <Image Height="33.125" Canvas.Left="3090" Source="pack://siteoforigin:,,,/bgcloud.png" Stretch="Fill" Canvas.Top="574.043" Width="70"/>
-        <Image Height="1061.877" Canvas.Left="2959" Source="pack://siteoforigin:,,,/bgcloud.png" Stretch="Fill" Canvas.Top="378" Width="2244"/>
-        <Image Height="42" Canvas.Left="4266" Source="pack://siteoforigin:,,,/bgcloud.png" Stretch="Fill" Canvas.Top="486" Width="88.756"/>
-        <Image Height="472.261" Canvas.Left="2353" Source="pack://siteoforigin:,,,/bgcloud.png" Stretch="Fill" Canvas.Top="-154.261" Width="998"/>
+        <Image Height="1201" Canvas.Left="8328" Source="assets/bgcloud.png" Stretch="Fill" Canvas.Top="2392.184" Width="2538" Panel.ZIndex="-6"/>
+        <Image Height="1201" Canvas.Left="2226" Source="assets/bgcloud.png" Stretch="Fill" Canvas.Top="4518" Width="3994" Panel.ZIndex="-6"/>
+        <Image Height="33.125" Canvas.Left="3090" Source="assets/bgcloud.png" Stretch="Fill" Canvas.Top="574.043" Width="70"/>
+        <Image Height="1061.877" Canvas.Left="2959" Source="assets/bgcloud.png" Stretch="Fill" Canvas.Top="378" Width="2244"/>
+        <Image Height="42" Canvas.Left="4266" Source="assets/bgcloud.png" Stretch="Fill" Canvas.Top="486" Width="88.756"/>
+        <Image Height="472.261" Canvas.Left="2353" Source="assets/bgcloud.png" Stretch="Fill" Canvas.Top="-154.261" Width="998"/>
     </Canvas>
 </UserControl>
