@@ -143,6 +143,21 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="assets\bgcloud.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="assets\CEcastle.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="assets\grassfront.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="assets\grasspatches.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="assets\grasstop.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -156,15 +171,23 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="assets\balloonblue.png" />
+    <Resource Include="assets\balloongreen.png" />
+    <Resource Include="assets\balloonred.png" />
     <Resource Include="assets\cloud.png" />
+    <Resource Include="assets\cloudringback.png" />
+    <Resource Include="assets\cloudringfront.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="assets\dash.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="assets\grassback.png" />
+    <Resource Include="assets\grassmiddle.png" />
     <Resource Include="assets\hoers.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="assets\pigeon2.png" />
     <Resource Include="assets\serzants.jpg" />
   </ItemGroup>
   <ItemGroup>
