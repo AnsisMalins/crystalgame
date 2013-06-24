@@ -298,7 +298,7 @@
         <Image Height="184" Canvas.Left="10565" Source="assets/cloudringback.png" Stretch="Fill" Canvas.Top="5306" Width="97" Panel.ZIndex="-4"/>
         <Image Height="184" Canvas.Left="10976" Source="assets/cloudringfront.png" Stretch="Fill" Canvas.Top="5514.184" Width="97" Panel.ZIndex="2" local:Entity.Type="local:Hoop"/>
         <Image Height="184" Canvas.Left="10976" Source="assets/cloudringback.png" Stretch="Fill" Canvas.Top="5514.184" Width="97" Panel.ZIndex="-4"/>
-        <Image Height="1561.155" Canvas.Left="11622" Source="assets/cloudringfront.png" Stretch="Fill" Canvas.Top="5010.184" Width="823" Panel.ZIndex="2" local:Entity.Type="local:Hoop"/>
+        <Image Height="1561.155" Canvas.Left="11622" Source="assets/cloudringfront.png" Stretch="Fill" Canvas.Top="5010.184" Width="823" Panel.ZIndex="2" local:Entity.Type="local:Hoop" x:Name="Finish"/>
         <Image Height="1561.155" Canvas.Left="11622" Source="assets/cloudringback.png" Stretch="Fill" Canvas.Top="5010.184" Width="823" Panel.ZIndex="-4"/>
         <Image Height="190" Canvas.Left="2959" Source="assets/balloonblue.png" Stretch="Fill" Canvas.Top="2209.854" Width="76.508" Panel.ZIndex="-3"/>
         <Image Height="332.775" Canvas.Left="3881" Source="assets/balloongreen.png" Stretch="Fill" Canvas.Top="1925" Width="134" Panel.ZIndex="-3"/>
