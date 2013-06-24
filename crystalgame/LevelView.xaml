@@ -13,7 +13,7 @@
         <Image Canvas.Left="2312" Canvas.Top="2958" Height="137" Width="360"
                Source="assets/cloud.png"
                local:Entity.Type="local:Cloud" Stretch="Fill"/>
-        <Image Canvas.Left="356" Canvas.Top="2179.816" Height="73.184" Width="127.031"
+        <Image Canvas.Left="-292" Canvas.Top="2184.591" Height="73.184" Width="127.031"
                Source="assets/dash.png"
                local:Entity.Type="local:Pegasus" local:Entity.Velocity="1000,0"
                RenderTransformOrigin="0.5,0.5">
@@ -41,7 +41,7 @@
         <Image Canvas.Left="1590" Canvas.Top="1766.184" Height="146.5" Width="240"
         	Source="assets/cloud.png"
         	local:Entity.Type="{x:Type local:Cloud}" Stretch="Fill"/>
-        <Image Canvas.Left="10327" Canvas.Top="2474" Height="427" Width="904"
+        <Image Canvas.Left="10028" Canvas.Top="3305" Height="427" Width="904"
         	Source="assets/cloud.png"
         	local:Entity.Type="{x:Type local:Cloud}" Stretch="Fill"/>
         <Image Canvas.Left="9122.969" Canvas.Top="2838" Height="272" Width="544"
@@ -158,7 +158,6 @@
         <Image Height="803.957" Canvas.Left="685" Source="assets/bgcloud.png" Stretch="Fill" Canvas.Top="574.043" Width="1537" Panel.ZIndex="-6"/>
         <Image Height="392.572" Canvas.Left="4019" Source="assets/bgcloud.png" Stretch="Fill" Canvas.Top="1623.612" Width="1803.969" Panel.ZIndex="-6"/>
         <Image Height="574" Canvas.Left="1464" Source="assets/bgcloud.png" Stretch="Fill" Canvas.Top="1814.184" Width="779.785" Panel.ZIndex="-6"/>
-        <Image Height="1054" Source="assets/CEcastle.png" Stretch="Fill" Canvas.Top="1673" Width="1054" Panel.ZIndex="-1" Canvas.Left="8"/>
         <Image Height="303.159" Canvas.Left="4360.969" Source="assets/bgcloud.png" Stretch="Fill" Canvas.Top="841" Width="527.031" RenderTransformOrigin="0.5,0.5" Panel.ZIndex="-6">
         	<Image.RenderTransform>
         		<TransformGroup>
@@ -269,7 +268,7 @@
         <Image Height="184" Canvas.Left="9446" Source="assets/cloudringback.png" Stretch="Fill" Canvas.Top="4265" Width="97" Panel.ZIndex="-4"/>
         <Image Height="184" Canvas.Left="9686" Source="assets/cloudringfront.png" Stretch="Fill" Canvas.Top="4595" Width="97" Panel.ZIndex="2"/>
         <Image Height="184" Canvas.Left="9686" Source="assets/cloudringback.png" Stretch="Fill" Canvas.Top="4595" Width="97" Panel.ZIndex="-4"/>
-        <Image Height="2512" Canvas.Left="8" Source="assets/grassback.png" Stretch="Fill" Canvas.Top="6254" Width="14655" Panel.ZIndex="-2"/>
+        <Image Height="2512" Canvas.Left="8" Source="assets/grassback.png" Stretch="Fill" Canvas.Top="6254" Width="14655" Panel.ZIndex="-3"/>
         <Image Height="2006" Canvas.Left="8" Source="assets/grassmiddle.png" Stretch="Fill" Canvas.Top="6752" Width="14647" Panel.ZIndex="-2"/>
         <Image Height="998" Source="pack://siteoforigin:,,,/assets/grassfront.png" Stretch="Fill" Canvas.Top="7760" Width="14655" Panel.ZIndex="-1"/>
         <Image Height="1318" Source="pack://siteoforigin:,,,/assets/grasstop.png" Stretch="Fill" Canvas.Top="7440" Width="14655" Panel.ZIndex="-2"/>
@@ -294,21 +293,45 @@
         <Image Height="184" Canvas.Left="10265" Source="assets/cloudringback.png" Stretch="Fill" Canvas.Top="5057" Width="97" Panel.ZIndex="-4"/>
         <Image Height="184" Canvas.Left="10418" Source="assets/cloudringfront.png" Stretch="Fill" Canvas.Top="5192.184" Width="97" Panel.ZIndex="2"/>
         <Image Height="184" Canvas.Left="10418" Source="assets/cloudringback.png" Stretch="Fill" Canvas.Top="5192.184" Width="97" Panel.ZIndex="-4"/>
-        <Image Height="184" Canvas.Left="10565" Source="assets/cloudringfront.png" Stretch="Fill" Canvas.Top="5306" Width="97" Panel.ZIndex="2"/>
-        <Image Height="184" Canvas.Left="10565" Source="assets/cloudringback.png" Stretch="Fill" Canvas.Top="5306" Width="97" Panel.ZIndex="-4"/>
-        <Image Height="184" Canvas.Left="10976" Source="assets/cloudringfront.png" Stretch="Fill" Canvas.Top="5514.184" Width="97" Panel.ZIndex="2"/>
-        <Image Height="184" Canvas.Left="10976" Source="assets/cloudringback.png" Stretch="Fill" Canvas.Top="5514.184" Width="97" Panel.ZIndex="-4"/>
-        <Image Height="1561.155" Canvas.Left="11622" Source="assets/cloudringfront.png" Stretch="Fill" Canvas.Top="5010.184" Width="823" Panel.ZIndex="2"/>
-        <Image Height="1561.155" Canvas.Left="11622" Source="assets/cloudringback.png" Stretch="Fill" Canvas.Top="5010.184" Width="823" Panel.ZIndex="-4"/>
-        <Image Height="190" Canvas.Left="2959" Source="assets/balloonblue.png" Stretch="Fill" Canvas.Top="2209.854" Width="76.508" Panel.ZIndex="-3"/>
-        <Image Height="332.775" Canvas.Left="3881" Source="assets/balloongreen.png" Stretch="Fill" Canvas.Top="1925" Width="134" Panel.ZIndex="-3"/>
-        <Image Height="382.184" Canvas.Left="5385" Source="assets/balloonred.png" Stretch="Fill" Canvas.Top="2392.184" Width="153.896" Panel.ZIndex="-3"/>
-        <Image Height="372.509" Canvas.Left="5977" Source="assets/balloongreen.png" Stretch="Fill" Canvas.Top="3642.266" Width="150" Panel.ZIndex="-3"/>
-        <Image Height="360" Canvas.Left="7546.492" Source="assets/balloonblue.png" Stretch="Fill" Canvas.Top="2958" Width="144.963" Panel.ZIndex="-3"/>
-        <Image Height="382.184" Canvas.Left="9203.104" Source="assets/balloonred.png" Stretch="Fill" Canvas.Top="3593.184" Width="153.896" Panel.ZIndex="-3"/>
-        <Image Height="399" Canvas.Left="10721.037" Source="assets/balloonblue.png" Stretch="Fill" Canvas.Top="4380" Width="144.963" Panel.ZIndex="-3"/>
-        <Image Height="459" Canvas.Left="12385" Source="assets/balloongreen.png" Stretch="Fill" Canvas.Top="4518" Width="184.828" Panel.ZIndex="-3"/>
-        <Image Height="459" Canvas.Left="12707.104" Source="assets/balloonred.png" Stretch="Fill" Canvas.Top="4380" Width="177.896" Panel.ZIndex="-3"/>
-        <Image Height="439" Canvas.Left="12601.828" Source="assets/balloonblue.png" Stretch="Fill" Canvas.Top="4909.184" Width="168.963" Panel.ZIndex="-3"/>
+        <Image Height="184" Canvas.Left="10607" Source="assets/cloudringfront.png" Stretch="Fill" Canvas.Top="5264" Width="97" Panel.ZIndex="2"/>
+        <Image Height="184" Canvas.Left="10607" Source="assets/cloudringback.png" Stretch="Fill" Canvas.Top="5264" Width="97" Panel.ZIndex="-4"/>
+        <Image Height="184" Canvas.Left="11031" Source="assets/cloudringfront.png" Stretch="Fill" Canvas.Top="5678.184" Width="97" Panel.ZIndex="2"/>
+        <Image Height="184" Canvas.Left="11031" Source="assets/cloudringback.png" Stretch="Fill" Canvas.Top="5678.184" Width="97" Panel.ZIndex="-4"/>
+        <Image Height="809.98" Canvas.Left="11890" Source="assets/cloudringfront.png" Stretch="Fill" Canvas.Top="5938.02" Width="427" Panel.ZIndex="2"/>
+        <Image Height="809.98" Canvas.Left="11890" Source="assets/cloudringback.png" Stretch="Fill" Canvas.Top="5938.02" Width="427" Panel.ZIndex="-2"/>
+        <Image Height="118" Canvas.Left="2959" Source="assets/balloonblue.png" Stretch="Fill" Canvas.Top="2281.854" Width="47.515" Panel.ZIndex="-3"/>
+        <Image Height="134.775" Canvas.Left="3871" Source="assets/balloongreen.png" Stretch="Fill" Canvas.Top="2437.409" Width="54.27" Panel.ZIndex="-3"/>
+        <Image Height="121.427" Canvas.Left="5367" Source="assets/balloonred.png" Stretch="Fill" Canvas.Top="2652.941" Width="66.896" Panel.ZIndex="-3"/>
+        <Image Height="111.509" Canvas.Left="6082.098" Source="assets/balloongreen.png" Stretch="Fill" Canvas.Top="3642.266" Width="44.902" Panel.ZIndex="-3"/>
+        <Image Height="158.845" Canvas.Left="7546.492" Source="assets/balloonblue.png" Stretch="Fill" Canvas.Top="3159.155" Width="63.963" Panel.ZIndex="-3"/>
+        <Image Height="153.979" Canvas.Left="9203.104" Source="assets/balloonred.png" Stretch="Fill" Canvas.Top="3821.389" Width="62.004" Panel.ZIndex="-3"/>
+        <Image Height="131.405" Canvas.Left="10305.037" Source="assets/balloonblue.png" Stretch="Fill" Canvas.Top="4380" Width="56.963" Panel.ZIndex="-3"/>
+        <Image Height="459" Canvas.Left="12707.104" Source="assets/balloongreen.png" Stretch="Fill" Canvas.Top="5579.184" Width="184.828" Panel.ZIndex="-3"/>
+        <Image Height="459" Canvas.Left="12891.932" Source="assets/balloonred.png" Stretch="Fill" Canvas.Top="5938.02" Width="177.896" Panel.ZIndex="-3"/>
+        <Image Height="439" Canvas.Left="12400.865" Source="assets/balloonblue.png" Stretch="Fill" Canvas.Top="5811" Width="168.963" Panel.ZIndex="-3"/>
+        <Image Height="153.979" Canvas.Left="3373" Source="assets/balloonred.png" Stretch="Fill" Canvas.Top="2941.021" Width="62.004" Panel.ZIndex="-3"/>
+        <Image Height="111.509" Canvas.Left="7886" Source="assets/balloongreen.png" Stretch="Fill" Canvas.Top="4036.701" Width="44.902" Panel.ZIndex="-3"/>
+        <Image Height="158.845" Canvas.Left="5819.537" Source="assets/balloonblue.png" Stretch="Fill" Canvas.Top="2958" Width="63.963" Panel.ZIndex="-3"/>
+        <Image Height="184" Canvas.Left="10835" Source="assets/cloudringfront.png" Stretch="Fill" Canvas.Top="5370" Width="97" Panel.ZIndex="2"/>
+        <Image Height="184" Canvas.Left="10835" Source="assets/cloudringback.png" Stretch="Fill" Canvas.Top="5370" Width="97" Panel.ZIndex="-4"/>
+        <Image Height="184" Canvas.Left="11188" Source="assets/cloudringfront.png" Stretch="Fill" Canvas.Top="5938.02" Width="97" Panel.ZIndex="2"/>
+        <Image Height="184" Canvas.Left="11188" Source="assets/cloudringback.png" Stretch="Fill" Canvas.Top="5938.02" Width="97" Panel.ZIndex="-4"/>
+        <Image Height="184" Canvas.Left="11400" Source="assets/cloudringfront.png" Stretch="Fill" Canvas.Top="6066" Width="97" Panel.ZIndex="2"/>
+        <Image Height="184" Canvas.Left="11400" Source="assets/cloudringback.png" Stretch="Fill" Canvas.Top="6066" Width="97" Panel.ZIndex="-4"/>
+        <Image Height="1144" Canvas.Left="13996" Source="assets/di-KXA8.png" Stretch="Fill" Canvas.Top="7446" Width="1407" RenderTransformOrigin="0.5,0.5" Panel.ZIndex="-3">
+        	<Image.RenderTransform>
+        		<TransformGroup>
+        			<ScaleTransform/>
+        			<SkewTransform/>
+        			<RotateTransform Angle="89.119"/>
+        			<TranslateTransform/>
+        		</TransformGroup>
+        	</Image.RenderTransform>
+        </Image>
+        <Image Height="386.854" Canvas.Left="374.26" Source="assets/signhelpful.png" Stretch="Fill" Canvas.Top="2077" Width="687.74" Panel.ZIndex="1"/>
+        <Image Canvas.Left="-106" Canvas.Top="2323" Height="558" Width="1168"
+        	Source="assets/cloud.png"
+        	local:Entity.Type="{x:Type local:Cloud}" Stretch="Fill"/>
+        <Image Height="1194" Canvas.Left="12400.865" Source="assets/sign.png" Stretch="Fill" Canvas.Top="6956" Width="2024"/>
     </Canvas>
 </UserControl>
