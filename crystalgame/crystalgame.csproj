@@ -45,9 +45,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="CameraView.xaml.cs">
-      <DependentUpon>CameraView.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Cloud.cs" />
     <Compile Include="CloudView.xaml.cs">
       <DependentUpon>CloudView.xaml</DependentUpon>
@@ -71,10 +68,6 @@
       <DependentUpon>TutorialView.xaml</DependentUpon>
     </Compile>
     <Compile Include="World.cs" />
-    <Page Include="CameraView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="CloudView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

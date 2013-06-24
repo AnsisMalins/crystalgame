@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Threading;
 using System.Windows;
@@ -9,45 +10,51 @@ namespace crystalgame
 {
     public class World : ViewModel, IDisposable
     {
-        int fpsTemp;
-        long prevSecond;
+        private int fpsTemp;
+        private long prevSecond;
         private EventWaitHandle running;
+        private Canvas view;
 
-        public World()
+        public World(Canvas view)
         {
+            Gravity = GetGravity(view);
+            Speed = GetSpeed(view);
+
             Entities = new Collection<Entity>();
+            List<FrameworkElement> toRemove = new List<FrameworkElement>(view.Children.Count);
+            foreach (UIElement i in view.Children)
+            {
+                var entityView = i as FrameworkElement;
+                if (entityView == null) continue;
+                Type entityType = Entity.GetType(entityView);
+                if (entityType == null) continue;
+
+                var entity = Activator.CreateInstance(entityType, entityView) as Entity;
+                if (entity == null) continue;
+
+                var pegasus = entity as Pegasus;
+                if (pegasus != null) Pegasus = pegasus;
+                
+                Entities.Add(entity);
+                toRemove.Add(entityView);
+            }
+
+            foreach (var i in toRemove) view.Children.Remove(i);
+
+            foreach (Entity entity in Entities)
+            {
+                FrameworkElement entityView = entity.CreateView();
+                if (entityView != null) view.Children.Add(entityView);
+            }
+
+            view.DataContext = this;
+
             running = new EventWaitHandle(false, EventResetMode.ManualReset);
             var thread = new Thread(DoWork);
             thread.IsBackground = true;
             thread.Priority = ThreadPriority.Highest;
             thread.Start();
         }
-
-        public World(Canvas view)
-            : this()
-        {
-            Gravity = GetGravity(view);
-            Speed = GetSpeed(view);
-
-            foreach (UIElement i in view.Children)
-            {
-                var entityView = i as FrameworkElement;
-                if (entityView == null) continue;
-                Entity entity = null;
-
-                if (entityView is CameraView) entity = new Camera(entityView);
-                else if (entityView is CloudView) entity = new Cloud(entityView);
-                else if (entityView is PegasusView) entity = new Pegasus(entityView);
-                else continue;
-
-                if (entity is Pegasus) Pegasus = entity as Pegasus;
-                else Entities.Add(entity);
-            }
-
-            view.DataContext = this;
-        }
-
-
 
         public Collection<Entity> Entities { get; private set; }
 
@@ -71,6 +78,12 @@ namespace crystalgame
         public void Dispose()
         {
             running.Close();
+        }
+
+        public Entity FindName(string name)
+        {
+            var foundView = view.FindName(name) as FrameworkElement;
+            return foundView != null ? foundView.DataContext as Entity : null;
         }
 
         public static Vector GetGravity(FrameworkElement view)
@@ -143,14 +156,12 @@ namespace crystalgame
         private void Simulate()
         {
             if (Player != null) Player.Simulate(this);
-            if (Pegasus != null) Pegasus.Simulate(this);
             foreach (Entity i in Entities) i.Simulate(this);
         }
 
         private void Render()
         {
             if (Player != null) Player.Render();
-            if (Pegasus != null) Pegasus.Render();
             foreach (Entity i in Entities) i.Render();
         }
     }

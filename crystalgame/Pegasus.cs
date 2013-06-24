@@ -6,6 +6,7 @@ using Utilities;
 
 namespace crystalgame
 {
+    [DefaultView(typeof(PegasusView))]
     public class Pegasus : Entity
     {
         public Pegasus(FrameworkElement view)

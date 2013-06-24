@@ -3,13 +3,13 @@ using Utilities;
 
 namespace crystalgame
 {
+    [DefaultView(typeof(CloudView))]
     public class Cloud : Entity
     {
         public Cloud(FrameworkElement view)
             : base(view)
         {
             Bounce = GetBounce(view);
-            if (double.IsNaN(Bounce)) Bounce = 0;
         }
 
         public double Bounce { get; set; }

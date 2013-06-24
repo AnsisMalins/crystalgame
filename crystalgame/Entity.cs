@@ -13,7 +13,6 @@ namespace crystalgame
         public Entity(FrameworkElement view)
         {
             Guard.ArgumentNotNull(view, "view");
-            this.view = view;
             Size = new Vector(view.Width, view.Height);
             BoundingCircleRadiusSquared = Math.Pow(Math.Max(Size.X, Size.Y) / 2, 2);
             double left = Canvas.GetLeft(view);
@@ -89,6 +88,12 @@ namespace crystalgame
             return new Vector(x, y).Length;
         }
 
+        public static Type GetType(FrameworkElement view)
+        {
+            Guard.ArgumentNotNull(view, "view");
+            return view.GetValue(TypeProperty) as Type;
+        }
+
         public static Vector GetVelocity(FrameworkElement view)
         {
             Guard.ArgumentNotNull(view, "view");
@@ -100,8 +105,10 @@ namespace crystalgame
             Render(view);
         }
 
-        public virtual void Simulate(World world)
+        public static void SetType(FrameworkElement view, Type value)
         {
+            Guard.ArgumentNotNull(view, "view");
+            view.SetValue(TypeProperty, value);
         }
 
         public static void SetVelocity(FrameworkElement view, Vector value)
@@ -109,6 +116,32 @@ namespace crystalgame
             Guard.ArgumentNotNull(view, "view");
             view.SetValue(VelocityProperty, value);
         }
+
+        public FrameworkElement CreateView()
+        {
+            var attr = Attribute.GetCustomAttribute(
+                GetType(), typeof(DefaultViewAttribute)) as DefaultViewAttribute;
+            if (attr == null) return null;
+            view = Activator.CreateInstance(attr.ViewType) as FrameworkElement;
+            if (view == null) return null;
+
+            view.Width = Size.X;
+            view.Height = Size.Y;
+            Canvas.SetLeft(view, Left);
+            Canvas.SetTop(view, Top);
+            view.RenderTransform = new RotateTransform(Angle * 180 / Math.PI);
+            view.RenderTransformOrigin = new Point(0.5, 0.5);
+            view.DataContext = this;
+
+            return view;
+        }
+
+        public virtual void Simulate(World world)
+        {
+        }
+
+        public static readonly DependencyProperty TypeProperty
+            = DependencyProperty.RegisterAttached("Type", typeof(Type), typeof(Entity));
 
         public static readonly DependencyProperty VelocityProperty
             = DependencyProperty.RegisterAttached("Velocity", typeof(Vector), typeof(Entity));
