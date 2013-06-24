@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace crystalgame
 {
     /// <summary>
-    /// Interaction logic for MainView.xaml
+    /// Interaction logic for CreditsView.xaml
     /// </summary>
-    public partial class MainView : UserControl
+    public partial class CreditsView : UserControl
     {
-        public MainView()
+        public CreditsView()
         {
             InitializeComponent();
         }

@@ -1,14 +1,51 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Windows;
+using System.Windows.Media;
+using Utilities;
 
 namespace crystalgame
 {
-    public class Camera
+    public class Camera : Entity
     {
-        public void Run(World world)
+        private TranslateTransform translate;
+
+        public Camera(FrameworkElement view)
+            : base(view)
         {
+            translate = new TranslateTransform(Left, Top);
+            var worldView = view.Parent as FrameworkElement;
+            worldView.RenderTransform = translate;
+            view.Visibility = Visibility.Collapsed;
+            Speed = GetSpeed(view);
+        }
+
+        public double Speed { get; set; }
+
+        public static double GetSpeed(FrameworkElement view)
+        {
+            Guard.ArgumentNotNull(view, "view");
+            return (double)view.GetValue(SpeedProperty);
+        }
+
+        public static void SetSpeed(FrameworkElement view, double value)
+        {
+            Guard.ArgumentNotNull(view, "view");
+            view.SetValue(SpeedProperty, value);
+        }
+
+        public override void Simulate(World world)
+        {
+            Pegasus pegasus = world.Pegasus;
+            if (pegasus == null) return;
+            Position += (pegasus.Position - Position) * Speed;
+        }
+
+        public static readonly DependencyProperty SpeedProperty
+            = DependencyProperty.RegisterAttached("Speed", typeof(double), typeof(Camera));
+
+        protected override void Render(FrameworkElement view)
+        {
+            translate.X = -Left;
+            translate.Y = -Top;
         }
     }
 }

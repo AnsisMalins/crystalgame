@@ -14,6 +14,7 @@ namespace Utilities
         public static readonly BooleanToVisibilityConverter BooleanToVisibility
             = new BooleanToVisibilityConverter();
         public new static readonly EqualsConverter Equals = new EqualsConverter();
+        public static readonly FormatStringConverter FormatString = new FormatStringConverter();
     }
 
     public class ConverterGroup : Collection<IValueConverter>, IValueConverter

@@ -20,6 +20,15 @@ namespace Utilities
 			return result.ToString();
 		}
 
+        public static void Dispose<T>(ref T obj) where T : IDisposable
+        {
+            if (obj != null)
+            {
+                obj.Dispose();
+                obj = default(T);
+            }
+        }
+
         public static string GetCallerName()
         {
             return GetCallerName(1);

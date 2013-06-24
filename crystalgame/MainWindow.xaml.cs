@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using Utilities;
 
 namespace crystalgame
 {
@@ -7,6 +8,11 @@ namespace crystalgame
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            Menu.Content = View.Create(new Menu(this));
         }
     }
 }

@@ -1,16 +1,15 @@
-﻿<UserControl x:Class="crystalgame.LevelView"
+﻿<UserControl  x:Class="crystalgame.LevelView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             mc:Ignorable="d" 
-             Height="720" Width="5000">
-    <Canvas Background="SkyBlue">
-    	<Image Height="47" Canvas.Left="118" Source="assets/qMtqj1z.png" Stretch="Fill" Canvas.Top="34" Width="102"/>
-    	<Image Height="49" Canvas.Left="283" Source="assets/qMtqj1z.png" Stretch="Fill" Canvas.Top="88" Width="107"/>
-    	<Image Height="59" Canvas.Left="356" Source="assets/qMtqj1z.png" Stretch="Fill" Canvas.Top="101" Width="86"/>
-    	<Image Height="32" Canvas.Left="502" Source="assets/qMtqj1z.png" Stretch="Fill" Canvas.Top="64" Width="159"/>
-    	<Image Height="74" Canvas.Left="735" Source="assets/qMtqj1z.png" Stretch="Fill" Canvas.Top="132" Width="147"/>
-    	<Image Height="61" Canvas.Left="118" Source="assets/qMtqj1z.png" Stretch="Fill" Canvas.Top="187" Width="112"/>
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:crystalgame"
+             mc:Ignorable="d"
+             Width="2000" Height="1000">
+    <Canvas x:Name="World" Background="#bdeae5" local:World.Gravity="0,0.98" local:World.Speed="0.2">
+        <local:CameraView Height="720" Canvas.Left="86" Canvas.Top="58" Width="1280" local:Camera.Speed="0.1"/>
+        <local:CloudView Canvas.Left="153" Canvas.Top="347" Height="85" Width="168" local:Cloud.Bounce="0.1"/>
+        <local:PegasusView Canvas.Left="1655.969" Canvas.Top="652.667" Height="73.184" Width="127.031"/>
+        <local:CloudView Canvas.Left="193.969" Canvas.Top="218" Height="85" Width="168" local:Cloud.Bounce="0.00005"/>
     </Canvas>
 </UserControl>
