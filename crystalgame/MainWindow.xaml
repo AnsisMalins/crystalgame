@@ -1,0 +1,18 @@
+﻿<Window x:Class="crystalgame.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:crystalgame"
+        mc:Ignorable="d" d:DesignWidth="640" d:DesignHeight="360"
+        Title="Equestria Games: Figure Flying" Icon="assets/icon.ico"
+        Background="Black" WindowStartupLocation="CenterScreen"
+        Loaded="Window_Loaded">
+    <Viewbox>
+        <Grid Width="1280" Height="720" ClipToBounds="True">
+            <ContentPresenter x:Name="World"/>
+            <ContentPresenter x:Name="Hud"/>
+            <ContentPresenter x:Name="Menu"/>
+        </Grid>
+    </Viewbox>
+</Window>

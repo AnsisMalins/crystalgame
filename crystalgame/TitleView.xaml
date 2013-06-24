@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="crystalgame.TitleView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d" d:DesignHeight="360" d:DesignWidth="640">
+    <UserControl.Resources>
+        <Storyboard x:Key="Intro">
+            <!--<DoubleAnimation Storyboard.TargetProperty="Opacity" 
+                             From="0" To="1" BeginTime="0:0:0" Duration="0:0:1"/>-->
+            <MediaTimeline Storyboard.TargetName="MyMedia"
+                           Source="assets/watermelon.mp3"/>
+        </Storyboard>
+    </UserControl.Resources>
+    <UserControl.Triggers>
+        <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+            <BeginStoryboard Storyboard="{StaticResource Intro}"/>
+        </EventTrigger>
+    </UserControl.Triggers>
+    <Grid>
+        <MediaElement x:Name="MyMedia" Volume="0.1"/>
+        <Image Source="assets/hoers.jpg" Stretch="Fill"/>
+    </Grid>
+</UserControl>
