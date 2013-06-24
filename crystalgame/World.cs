@@ -17,6 +17,7 @@ namespace crystalgame
 
         public World(Canvas view)
         {
+            this.view = view;
             Gravity = GetGravity(view);
             Speed = GetSpeed(view);
 
@@ -68,8 +69,9 @@ namespace crystalgame
             get { return _IsRunning; }
             set
             {
-                if (Set(ref _IsRunning, value))
+                if (_IsRunning != value)
                 {
+                    _IsRunning = value;
                     if (_IsRunning) Start(); else Stop();
                 }
             }

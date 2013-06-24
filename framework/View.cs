@@ -33,6 +33,7 @@ namespace Utilities
                 if (control is ContentControl) viewProperty = ContentControl.ContentProperty;
                 else if (control is ItemsControl) viewProperty = ItemsControl.ItemsSourceProperty;
                 else if (control is RangeBase) viewProperty = RangeBase.ValueProperty;
+                else if (control is TextBlock) viewProperty = TextBlock.TextProperty;
                 else continue;
 
                 if (control.GetBindingExpression(viewProperty) != null) continue;

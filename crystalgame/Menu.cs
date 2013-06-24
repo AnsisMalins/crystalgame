@@ -34,8 +34,10 @@ namespace crystalgame
             get { return _IsVisible; }
             set
             {
-                if (Set(ref _IsVisible, value))
+                if (_IsVisible != value)
                 {
+                    _IsVisible = value;
+                    OnPropertyChanged("IsVisible");
                     window.World.IsEnabled = !_IsVisible;
                     if (world != null) world.IsRunning = !_IsVisible;
                     if (_IsVisible) Focus();
@@ -70,6 +72,7 @@ namespace crystalgame
             world = new World(levelView.World);
             world.Player = new Player(window);
             window.World.Content = levelView;
+            window.Hud.Content = View.Create(world.Player);
             world.Start();
             OnPropertyChanged("CanContinue");
 
@@ -97,6 +100,7 @@ namespace crystalgame
                 world = null;
             }
             window.World.Content = null;
+            window.Hud.Content = null;
         }
 
         private void Focus()
