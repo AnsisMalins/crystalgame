@@ -6,94 +6,181 @@
              xmlns:local="clr-namespace:crystalgame"
              mc:Ignorable="d"
              Width="5167" Height="3294">
-    <Canvas x:Name="World" Background="#bdeae5">
-        <Rectangle Height="720" Canvas.Left="1727" Canvas.Top="1054" Width="1280"
+    <Canvas x:Name="World" Background="#bdeae5" Margin="0,0,-5880,-2800">
+        <Rectangle Height="720" Canvas.Left="471" Canvas.Top="1814.184" Width="1280"
                    StrokeDashArray="6" Stroke="Red" StrokeThickness="4"
                    local:Entity.Type="local:Camera"/>
-        <Image Canvas.Left="2683" Canvas.Top="1166" Height="85" Width="168"
+        <Image Canvas.Left="1955" Canvas.Top="1713.894" Height="137" Width="360"
                Source="assets/cloud.png"
-               local:Entity.Type="local:Cloud"/>
-        <Image Canvas.Left="2226" Canvas.Top="1304.816" Height="73.184" Width="127.031"
+               local:Entity.Type="local:Cloud" Stretch="Fill"/>
+        <Image Canvas.Left="1034" Canvas.Top="2179.816" Height="73.184" Width="127.031"
                Source="assets/dash.png"
-               local:Entity.Type="local:Pegasus" local:Entity.Velocity="1000,0"
-               RenderTransformOrigin="0.5,0.5"/>
-        <Image Canvas.Left="3679" Canvas.Top="613" Height="197" Width="208"
+               local:Entity.Type="local:Pegasus" local:Entity.Velocity="800,0"
+               RenderTransformOrigin="0.5,0.5">
+        	<Image.RenderTransform>
+        		<TransformGroup>
+        			<ScaleTransform/>
+        			<SkewTransform/>
+        			<RotateTransform Angle="0"/>
+        			<TranslateTransform/>
+        		</TransformGroup>
+        	</Image.RenderTransform>
+        </Image>
+        <Image Canvas.Left="3979" Canvas.Top="2886.184" Height="181" Width="368"
         	Source="assets/cloud.png"
-        	local:Entity.Type="{x:Type local:Cloud}"/>
-        <Image Canvas.Left="1881.031" Canvas.Top="1689" Height="85" Width="168"
+        	local:Entity.Type="{x:Type local:Cloud}" Stretch="Fill"/>
+        <Image Canvas.Left="1631" Canvas.Top="1814.184" Height="146.5" Width="240"
         	Source="assets/cloud.png"
-        	local:Entity.Type="{x:Type local:Cloud}"/>
-        <Image Canvas.Left="1147" Canvas.Top="613" Height="200" Width="200"
+        	local:Entity.Type="{x:Type local:Cloud}" Stretch="Fill"/>
+        <Image Canvas.Left="4023" Canvas.Top="4314" Height="904" Width="1976"
         	Source="assets/cloud.png"
-        	local:Entity.Type="{x:Type local:Cloud}"/>
-        <Image Canvas.Left="1147" Canvas.Top="2359" Height="200" Width="200"
+        	local:Entity.Type="{x:Type local:Cloud}" Stretch="Fill"/>
+        <Image Canvas.Left="3698.969" Canvas.Top="3910" Height="832" Width="1184"
         	Source="assets/cloud.png"
-        	local:Entity.Type="{x:Type local:Cloud}"/>
-        <Image Canvas.Left="3687" Canvas.Top="2359" Height="200" Width="200"
+        	local:Entity.Type="{x:Type local:Cloud}" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
+        	<Image.RenderTransform>
+        		<TransformGroup>
+        			<ScaleTransform ScaleX="-1"/>
+        			<SkewTransform/>
+        			<RotateTransform/>
+        			<TranslateTransform/>
+        		</TransformGroup>
+        	</Image.RenderTransform>
+        </Image>
+        <Image Canvas.Left="5349" Canvas.Top="4061.184" Height="908.816" Width="1454"
         	Source="assets/cloud.png"
-        	local:Entity.Type="{x:Type local:Cloud}"/>
-        <Image Canvas.Left="3687" Canvas.Top="810" Height="200" Width="200"
+        	local:Entity.Type="{x:Type local:Cloud}" Stretch="Fill"/>
+        <Image Canvas.Left="5819" Canvas.Top="4333.184" Height="920.816" Width="1928"
         	Source="assets/cloud.png"
-        	local:Entity.Type="{x:Type local:Cloud}"/>
-        <Image Canvas.Left="3687" Canvas.Top="1054" Height="200" Width="200"
+        	local:Entity.Type="{x:Type local:Cloud}" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
+        	<Image.RenderTransform>
+        		<TransformGroup>
+        			<ScaleTransform ScaleX="-1"/>
+        			<SkewTransform/>
+        			<RotateTransform/>
+        			<TranslateTransform/>
+        		</TransformGroup>
+        	</Image.RenderTransform>
+        </Image>
+        <Image Canvas.Left="7959" Canvas.Top="4061.184" Height="1184.816" Width="1256"
         	Source="assets/cloud.png"
-        	local:Entity.Type="{x:Type local:Cloud}"/>
-        <Image Canvas.Left="3679" Canvas.Top="1304.816" Height="200" Width="200"
+        	local:Entity.Type="{x:Type local:Cloud}" Stretch="Fill"/>
+        <Image Canvas.Left="3979" Canvas.Top="2110.184" Height="200" Width="448"
         	Source="assets/cloud.png"
-        	local:Entity.Type="{x:Type local:Cloud}"/>
-        <Image Canvas.Left="3679" Canvas.Top="1526.184" Height="200" Width="200"
+        	local:Entity.Type="{x:Type local:Cloud}" Stretch="Fill"/>
+        <Image Canvas.Left="8727" Canvas.Top="4188.816" Height="656.816" Width="1288"
         	Source="assets/cloud.png"
-        	local:Entity.Type="{x:Type local:Cloud}"/>
-        <Image Canvas.Left="3679" Canvas.Top="1814.184" Height="200" Width="200"
+        	local:Entity.Type="{x:Type local:Cloud}" Stretch="Fill"/>
+        <Image Canvas.Left="6807" Canvas.Top="4061.184" Height="908.816" Width="1647.031"
         	Source="assets/cloud.png"
-        	local:Entity.Type="{x:Type local:Cloud}"/>
-        <Image Canvas.Left="3679" Canvas.Top="2019.184" Height="200" Width="200"
+        	local:Entity.Type="{x:Type local:Cloud}" Stretch="Fill"/>
+        <Image Canvas.Left="3819" Canvas.Top="4518" Height="728" Width="1384"
         	Source="assets/cloud.png"
-        	local:Entity.Type="{x:Type local:Cloud}"/>
-        <Image Canvas.Left="3399" Canvas.Top="2359" Height="200" Width="200"
+        	local:Entity.Type="{x:Type local:Cloud}" Stretch="Fill"/>
+        <Image Canvas.Left="2743" Canvas.Top="4314" Height="796" Width="1684"
         	Source="assets/cloud.png"
-        	local:Entity.Type="{x:Type local:Cloud}"/>
-        <Image Canvas.Left="3127" Canvas.Top="2359" Height="200" Width="200"
+        	local:Entity.Type="{x:Type local:Cloud}" Stretch="Fill"/>
+        <Image Canvas.Left="2065" Canvas.Top="3065" Height="388.29" Width="626"
         	Source="assets/cloud.png"
-        	local:Entity.Type="{x:Type local:Cloud}"/>
-        <Image Canvas.Left="2807" Canvas.Top="2359" Height="200" Width="200"
+        	local:Entity.Type="{x:Type local:Cloud}" Stretch="Fill"/>
+        <Image Canvas.Left="2226" Canvas.Top="2110.184" Height="156" Width="297"
         	Source="assets/cloud.png"
-        	local:Entity.Type="{x:Type local:Cloud}"/>
-        <Image Canvas.Left="2651" Canvas.Top="2359" Height="200" Width="200"
+        	local:Entity.Type="{x:Type local:Cloud}" Stretch="Fill"/>
+        <Image Canvas.Left="2353" Canvas.Top="3870" Height="996" Width="1160"
         	Source="assets/cloud.png"
-        	local:Entity.Type="{x:Type local:Cloud}"/>
-        <Image Canvas.Left="2451" Canvas.Top="2359" Height="200" Width="200"
+        	local:Entity.Type="{x:Type local:Cloud}" Stretch="Fill"/>
+        <Image Canvas.Left="2226" Canvas.Top="4622" Height="488" Width="934"
         	Source="assets/cloud.png"
-        	local:Entity.Type="{x:Type local:Cloud}"/>
-        <Image Canvas.Left="2153.031" Canvas.Top="2359" Height="200" Width="200"
+        	local:Entity.Type="{x:Type local:Cloud}" Stretch="Fill"/>
+        <Image Canvas.Left="785" Canvas.Top="1077.184" Height="300.816" Width="811"
         	Source="assets/cloud.png"
-        	local:Entity.Type="{x:Type local:Cloud}"/>
-        <Image Canvas.Left="1849.031" Canvas.Top="2359" Height="200" Width="200"
+        	local:Entity.Type="{x:Type local:Cloud}" Stretch="Fill"/>
+        <Image Canvas.Left="2863" Canvas.Top="2721" Height="200" Width="476"
         	Source="assets/cloud.png"
-        	local:Entity.Type="{x:Type local:Cloud}"/>
-        <Image Canvas.Left="1644.031" Canvas.Top="2359" Height="200" Width="200"
+        	local:Entity.Type="{x:Type local:Cloud}" Stretch="Fill"/>
+        <Image Canvas.Left="9219" Canvas.Top="4314" Height="1122" Width="1344"
         	Source="assets/cloud.png"
-        	local:Entity.Type="{x:Type local:Cloud}"/>
-        <Image Canvas.Left="1352" Canvas.Top="2359" Height="200" Width="200"
+        	local:Entity.Type="{x:Type local:Cloud}" Stretch="Fill"/>
+        <Image Canvas.Left="2959" Canvas.Top="1497" Height="200" Width="392"
         	Source="assets/cloud.png"
-        	local:Entity.Type="{x:Type local:Cloud}"/>
-        <Image Canvas.Left="1147" Canvas.Top="2154" Height="200" Width="200"
+        	local:Entity.Type="{x:Type local:Cloud}" Stretch="Fill"/>
+        <Image Canvas.Left="1282" Canvas.Top="2757" Height="164" Width="314"
         	Source="assets/cloud.png"
-        	local:Entity.Type="{x:Type local:Cloud}"/>
-        <Image Canvas.Left="1147" Canvas.Top="1949" Height="200" Width="200"
+        	local:Entity.Type="{x:Type local:Cloud}" Stretch="Fill"/>
+        <Image Canvas.Left="29" Canvas.Top="3875.184" Height="912" Width="1464"
         	Source="assets/cloud.png"
-        	local:Entity.Type="{x:Type local:Cloud}"/>
-        <Image Canvas.Left="1147" Canvas.Top="1574" Height="200" Width="200"
+        	local:Entity.Type="{x:Type local:Cloud}" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
+        	<Image.RenderTransform>
+        		<TransformGroup>
+        			<ScaleTransform ScaleX="-1"/>
+        			<SkewTransform/>
+        			<RotateTransform/>
+        			<TranslateTransform/>
+        		</TransformGroup>
+        	</Image.RenderTransform>
+        </Image>
+        <Image Canvas.Left="892.215" Canvas.Top="3870" Height="636" Width="1282.785"
         	Source="assets/cloud.png"
-        	local:Entity.Type="{x:Type local:Cloud}"/>
-        <Image Canvas.Left="1147" Canvas.Top="1304.816" Height="200" Width="200"
+        	local:Entity.Type="{x:Type local:Cloud}" Stretch="Fill"/>
+        <Image Canvas.Left="717" Canvas.Top="4351.184" Height="788" Width="1313"
         	Source="assets/cloud.png"
-        	local:Entity.Type="{x:Type local:Cloud}"/>
-        <Image Canvas.Left="1147" Canvas.Top="1054" Height="200" Width="200"
+        	local:Entity.Type="{x:Type local:Cloud}" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
+        	<Image.RenderTransform>
+        		<TransformGroup>
+        			<ScaleTransform ScaleX="-1"/>
+        			<SkewTransform/>
+        			<RotateTransform/>
+        			<TranslateTransform/>
+        		</TransformGroup>
+        	</Image.RenderTransform>
+        </Image>
+        <Image Canvas.Left="1464" Canvas.Top="4188.816" Height="781.184" Width="1279"
         	Source="assets/cloud.png"
-        	local:Entity.Type="{x:Type local:Cloud}"/>
-        <Image Canvas.Left="1147" Canvas.Top="818" Height="200" Width="200"
+        	local:Entity.Type="{x:Type local:Cloud}" Stretch="Fill"/>
+        <Image Canvas.Left="1775" Canvas.Top="2517" Height="200" Width="400"
         	Source="assets/cloud.png"
-        	local:Entity.Type="{x:Type local:Cloud}"/>
+        	local:Entity.Type="{x:Type local:Cloud}" Stretch="Fill"/>
+        <Image Height="803.957" Canvas.Left="685" Source="pack://siteoforigin:,,,/bgcloud.png" Stretch="Fill" Canvas.Top="574.043" Width="1537" Panel.ZIndex="-6"/>
+        <Image Height="392.572" Canvas.Left="4019" Source="pack://siteoforigin:,,,/bgcloud.png" Stretch="Fill" Canvas.Top="1623.612" Width="1803.969" Panel.ZIndex="-6"/>
+        <Image Height="574" Canvas.Left="1464" Source="pack://siteoforigin:,,,/bgcloud.png" Stretch="Fill" Canvas.Top="1814.184" Width="779.785" Panel.ZIndex="-6"/>
+        <Image Height="1054" Source="pack://siteoforigin:,,,/CEcastle.png" Stretch="Fill" Canvas.Top="1663" Width="1054" Panel.ZIndex="-1" Canvas.Left="285"/>
+        <Image Height="303.159" Canvas.Left="4360.969" Source="pack://siteoforigin:,,,/bgcloud.png" Stretch="Fill" Canvas.Top="841" Width="527.031" RenderTransformOrigin="0.5,0.5" Panel.ZIndex="-6">
+        	<Image.RenderTransform>
+        		<TransformGroup>
+        			<ScaleTransform ScaleX="-1"/>
+        			<SkewTransform/>
+        			<RotateTransform/>
+        			<TranslateTransform/>
+        		</TransformGroup>
+        	</Image.RenderTransform>
+        </Image>
+        <Image Height="585" Canvas.Left="3042" Source="pack://siteoforigin:,,,/bgcloud.png" Stretch="Fill" Canvas.Top="2888.816" Width="1798" RenderTransformOrigin="0.5,0.5" Panel.ZIndex="-6">
+        	<Image.RenderTransform>
+        		<TransformGroup>
+        			<ScaleTransform ScaleX="-1"/>
+        			<SkewTransform/>
+        			<RotateTransform/>
+        			<TranslateTransform/>
+        		</TransformGroup>
+        	</Image.RenderTransform>
+        </Image>
+        <Image Height="627.894" Canvas.Left="5868" Source="pack://siteoforigin:,,,/bgcloud.png" Stretch="Fill" Canvas.Top="149" Width="1128" Panel.ZIndex="-6"/>
+        <Image Height="564.868" Canvas.Left="7715" Source="pack://siteoforigin:,,,/bgcloud.png" Stretch="Fill" Canvas.Top="1215.098" Width="1378" Panel.ZIndex="-6"/>
+        <Image Height="726.121" Canvas.Left="6474" Source="pack://siteoforigin:,,,/bgcloud.png" Stretch="Fill" Canvas.Top="2136.184" Width="806" RenderTransformOrigin="0.5,0.5" Panel.ZIndex="-6">
+        	<Image.RenderTransform>
+        		<TransformGroup>
+        			<ScaleTransform ScaleX="-1"/>
+        			<SkewTransform/>
+        			<RotateTransform/>
+        			<TranslateTransform/>
+        		</TransformGroup>
+        	</Image.RenderTransform>
+        </Image>
+        <Image Height="1201" Canvas.Left="8328" Source="pack://siteoforigin:,,,/bgcloud.png" Stretch="Fill" Canvas.Top="2392.184" Width="2538" Panel.ZIndex="-6"/>
+        <Image Height="1201" Canvas.Left="2226" Source="pack://siteoforigin:,,,/bgcloud.png" Stretch="Fill" Canvas.Top="4518" Width="3994" Panel.ZIndex="-6"/>
+        <Image Height="33.125" Canvas.Left="3090" Source="pack://siteoforigin:,,,/bgcloud.png" Stretch="Fill" Canvas.Top="574.043" Width="70"/>
+        <Image Height="1061.877" Canvas.Left="2959" Source="pack://siteoforigin:,,,/bgcloud.png" Stretch="Fill" Canvas.Top="378" Width="2244"/>
+        <Image Height="42" Canvas.Left="4266" Source="pack://siteoforigin:,,,/bgcloud.png" Stretch="Fill" Canvas.Top="486" Width="88.756"/>
+        <Image Height="472.261" Canvas.Left="2353" Source="pack://siteoforigin:,,,/bgcloud.png" Stretch="Fill" Canvas.Top="-154.261" Width="998"/>
     </Canvas>
 </UserControl>
