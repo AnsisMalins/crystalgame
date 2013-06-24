@@ -1,5 +1,4 @@
-﻿using System;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using System.Windows;
 using System.Windows.Data;
 using System.Windows.Input;
@@ -12,13 +11,16 @@ namespace crystalgame
     {
         private MainWindow window;
         private World world;
+        private bool fullscreen;
 
         public Menu(MainWindow window)
         {
             Guard.ArgumentNotNull(window, "window");
             this.window = window;
             window.KeyDown += window_KeyDown;
+            window.PreviewKeyDown += window_PreviewKeyDown;
             window.World.Content = new TitleView();
+            Exec.OnMain(() => Focus());
         }
 
         public bool CanContinue
@@ -30,7 +32,15 @@ namespace crystalgame
         public bool IsVisible
         {
             get { return _IsVisible; }
-            set { Set(ref _IsVisible, value); }
+            set
+            {
+                if (Set(ref _IsVisible, value))
+                {
+                    window.World.IsEnabled = !_IsVisible;
+                    if (world != null) world.IsRunning = !_IsVisible;
+                    if (_IsVisible) Focus();
+                }
+            }
         }
 
         public void Continue()
@@ -89,15 +99,45 @@ namespace crystalgame
             window.World.Content = null;
         }
 
+        private void Focus()
+        {
+            var menuView = window.Menu.Content as FrameworkElement;
+            if (menuView == null) return;
+            var newGame = menuView.FindName("NewGame") as UIElement;
+            if (newGame == null) return;
+            Exec.OnMain(() => Keyboard.Focus(newGame));
+        }
+
         private void window_KeyDown(object sender, KeyEventArgs e)
         {
             switch (e.Key)
             {
                 case Key.Escape:
-                    if (world != null) world.Stop();
-                    IsVisible = true;
+                    IsVisible = !IsVisible;
                     break;
             }
+        }
+
+        private void window_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key != Key.F11) return;
+
+            if (!fullscreen)
+            {
+                bool maximized = window.WindowState == WindowState.Maximized;
+                window.WindowState = WindowState.Normal;
+                window.WindowStyle = WindowStyle.None;
+                if (maximized) window.WindowState = WindowState.Maximized;
+                window.ResizeMode = ResizeMode.NoResize;
+            }
+            else
+            {
+                window.WindowStyle = WindowStyle.SingleBorderWindow;
+                window.ResizeMode = ResizeMode.CanResize;
+            }
+            fullscreen = !fullscreen;
+
+            e.Handled = true;
         }
     }
 }

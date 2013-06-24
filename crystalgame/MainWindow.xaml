@@ -6,10 +6,12 @@
         xmlns:local="clr-namespace:crystalgame"
         mc:Ignorable="d" d:DesignWidth="640" d:DesignHeight="360"
         Title="Equestria Games: Figure Flying" Icon="assets/icon.ico"
-        Background="Black" Loaded="Window_Loaded">
+        Background="Black" WindowStartupLocation="CenterScreen"
+        Loaded="Window_Loaded">
     <Viewbox>
         <Grid Width="1280" Height="720" ClipToBounds="True">
             <ContentPresenter x:Name="World"/>
+            
             <ContentPresenter x:Name="Menu"/>
         </Grid>
     </Viewbox>

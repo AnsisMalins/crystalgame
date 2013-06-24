@@ -5,6 +5,18 @@
              HorizontalAlignment="Center" VerticalAlignment="Center"
              Visibility="{Binding IsVisible,
                 Converter={x:Static fw:ValueConverters.BooleanToVisibility}}">
+    <UserControl.Resources>
+        <Style TargetType="Button">
+            <Style.Triggers>
+                <Trigger Property="IsFocused" Value="True">
+                    <Trigger.EnterActions>
+                        <SoundPlayerAction Source="assets/141121__eternitys__interface1.wav"/>
+                    </Trigger.EnterActions>
+                    <Setter Property="FontSize" Value="24"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
     <Grid Width="300" Height="300">
         <Grid.RowDefinitions>
             <RowDefinition/>

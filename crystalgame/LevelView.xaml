@@ -5,31 +5,94 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:crystalgame"
              mc:Ignorable="d"
-             Width="2000" Height="1000">
+             Width="5167" Height="3294">
     <Canvas x:Name="World" Background="#bdeae5">
-        <Rectangle Height="720" Canvas.Left="86" Canvas.Top="58" Width="1280"
+        <Rectangle Height="720" Canvas.Left="1727" Canvas.Top="1054" Width="1280"
                    StrokeDashArray="6" Stroke="Red" StrokeThickness="4"
                    local:Entity.Type="local:Camera"/>
-        <Image Canvas.Left="153" Canvas.Top="373" Height="85" Width="168"
+        <Image Canvas.Left="2683" Canvas.Top="1166" Height="85" Width="168"
                Source="assets/cloud.png"
                local:Entity.Type="local:Cloud"/>
-        <Image Canvas.Left="193.969" Canvas.Top="218" Height="85" Width="168"
-               Source="assets/cloud.png"
-               local:Entity.Type="local:Cloud"/>
-        <Image Canvas.Left="379.969" Canvas.Top="347" Height="73.184" Width="127.031"
+        <Image Canvas.Left="2226" Canvas.Top="1304.816" Height="73.184" Width="127.031"
                Source="assets/dash.png"
                local:Entity.Type="local:Pegasus" local:Entity.Velocity="1000,0"
                RenderTransformOrigin="0.5,0.5"/>
-        <Image Canvas.Left="987" Canvas.Top="823" Height="85" Width="168"
+        <Image Canvas.Left="3679" Canvas.Top="613" Height="197" Width="208"
         	Source="assets/cloud.png"
         	local:Entity.Type="{x:Type local:Cloud}"/>
-        <Image Canvas.Left="679" Canvas.Top="171" Height="85" Width="168"
+        <Image Canvas.Left="1881.031" Canvas.Top="1689" Height="85" Width="168"
         	Source="assets/cloud.png"
         	local:Entity.Type="{x:Type local:Cloud}"/>
-        <Image Canvas.Left="171" Canvas.Top="629" Height="85" Width="168"
+        <Image Canvas.Left="1147" Canvas.Top="613" Height="200" Width="200"
         	Source="assets/cloud.png"
         	local:Entity.Type="{x:Type local:Cloud}"/>
-        <Image Canvas.Left="1257" Canvas.Top="277" Height="85" Width="168"
+        <Image Canvas.Left="1147" Canvas.Top="2359" Height="200" Width="200"
+        	Source="assets/cloud.png"
+        	local:Entity.Type="{x:Type local:Cloud}"/>
+        <Image Canvas.Left="3687" Canvas.Top="2359" Height="200" Width="200"
+        	Source="assets/cloud.png"
+        	local:Entity.Type="{x:Type local:Cloud}"/>
+        <Image Canvas.Left="3687" Canvas.Top="810" Height="200" Width="200"
+        	Source="assets/cloud.png"
+        	local:Entity.Type="{x:Type local:Cloud}"/>
+        <Image Canvas.Left="3687" Canvas.Top="1054" Height="200" Width="200"
+        	Source="assets/cloud.png"
+        	local:Entity.Type="{x:Type local:Cloud}"/>
+        <Image Canvas.Left="3687" Canvas.Top="1304.816" Height="200" Width="200"
+        	Source="assets/cloud.png"
+        	local:Entity.Type="{x:Type local:Cloud}"/>
+        <Image Canvas.Left="3679" Canvas.Top="1526.184" Height="200" Width="200"
+        	Source="assets/cloud.png"
+        	local:Entity.Type="{x:Type local:Cloud}"/>
+        <Image Canvas.Left="3679" Canvas.Top="1814.184" Height="200" Width="200"
+        	Source="assets/cloud.png"
+        	local:Entity.Type="{x:Type local:Cloud}"/>
+        <Image Canvas.Left="3679" Canvas.Top="2019.184" Height="200" Width="200"
+        	Source="assets/cloud.png"
+        	local:Entity.Type="{x:Type local:Cloud}"/>
+        <Image Canvas.Left="3399" Canvas.Top="2359" Height="200" Width="200"
+        	Source="assets/cloud.png"
+        	local:Entity.Type="{x:Type local:Cloud}"/>
+        <Image Canvas.Left="3127" Canvas.Top="2359" Height="200" Width="200"
+        	Source="assets/cloud.png"
+        	local:Entity.Type="{x:Type local:Cloud}"/>
+        <Image Canvas.Left="2807" Canvas.Top="2359" Height="200" Width="200"
+        	Source="assets/cloud.png"
+        	local:Entity.Type="{x:Type local:Cloud}"/>
+        <Image Canvas.Left="2651" Canvas.Top="2359" Height="200" Width="200"
+        	Source="assets/cloud.png"
+        	local:Entity.Type="{x:Type local:Cloud}"/>
+        <Image Canvas.Left="2451" Canvas.Top="2359" Height="200" Width="200"
+        	Source="assets/cloud.png"
+        	local:Entity.Type="{x:Type local:Cloud}"/>
+        <Image Canvas.Left="2153.031" Canvas.Top="2359" Height="200" Width="200"
+        	Source="assets/cloud.png"
+        	local:Entity.Type="{x:Type local:Cloud}"/>
+        <Image Canvas.Left="1849.031" Canvas.Top="2359" Height="200" Width="200"
+        	Source="assets/cloud.png"
+        	local:Entity.Type="{x:Type local:Cloud}"/>
+        <Image Canvas.Left="1644.031" Canvas.Top="2359" Height="200" Width="200"
+        	Source="assets/cloud.png"
+        	local:Entity.Type="{x:Type local:Cloud}"/>
+        <Image Canvas.Left="1352" Canvas.Top="2359" Height="200" Width="200"
+        	Source="assets/cloud.png"
+        	local:Entity.Type="{x:Type local:Cloud}"/>
+        <Image Canvas.Left="1147" Canvas.Top="2154" Height="200" Width="200"
+        	Source="assets/cloud.png"
+        	local:Entity.Type="{x:Type local:Cloud}"/>
+        <Image Canvas.Left="1147" Canvas.Top="1949" Height="200" Width="200"
+        	Source="assets/cloud.png"
+        	local:Entity.Type="{x:Type local:Cloud}"/>
+        <Image Canvas.Left="1147" Canvas.Top="1574" Height="200" Width="200"
+        	Source="assets/cloud.png"
+        	local:Entity.Type="{x:Type local:Cloud}"/>
+        <Image Canvas.Left="1147" Canvas.Top="1304.816" Height="200" Width="200"
+        	Source="assets/cloud.png"
+        	local:Entity.Type="{x:Type local:Cloud}"/>
+        <Image Canvas.Left="1147" Canvas.Top="1054" Height="200" Width="200"
+        	Source="assets/cloud.png"
+        	local:Entity.Type="{x:Type local:Cloud}"/>
+        <Image Canvas.Left="1147" Canvas.Top="818" Height="200" Width="200"
         	Source="assets/cloud.png"
         	local:Entity.Type="{x:Type local:Cloud}"/>
     </Canvas>

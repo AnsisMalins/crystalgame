@@ -66,7 +66,13 @@ namespace crystalgame
         public bool IsRunning
         {
             get { return _IsRunning; }
-            set { Set(ref _IsRunning, value); }
+            set
+            {
+                if (Set(ref _IsRunning, value))
+                {
+                    if (_IsRunning) Start(); else Stop();
+                }
+            }
         }
 
         public Pegasus Pegasus { get; set; }
