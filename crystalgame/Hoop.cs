@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using System.Windows.Controls;
 using Utilities;
 
 namespace crystalgame
@@ -9,7 +10,11 @@ namespace crystalgame
         public Hoop(FrameworkElement view)
             : base(view)
         {
+            if (view.Name == "Finish")
+                IsFinish = true;
         }
+
+        public bool IsFinish { get; set; }
 
         public bool IsVisited { get; set; }
 
