@@ -13,8 +13,7 @@ namespace crystalgame
         {
             translate = new TranslateTransform(Left, Top);
             var worldView = view.Parent as FrameworkElement;
-            worldView.RenderTransform = translate;
-            view.Visibility = Visibility.Collapsed;
+            if (worldView != null) worldView.RenderTransform = translate;
             Speed = GetSpeed(view);
         }
 
@@ -40,7 +39,8 @@ namespace crystalgame
         }
 
         public static readonly DependencyProperty SpeedProperty
-            = DependencyProperty.RegisterAttached("Speed", typeof(double), typeof(Camera));
+            = DependencyProperty.RegisterAttached(
+            "Speed", typeof(double), typeof(Camera), new PropertyMetadata(0.1));
 
         protected override void Render(FrameworkElement view)
         {

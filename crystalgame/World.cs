@@ -60,7 +60,7 @@ namespace crystalgame
 
         public int Fps { get; private set; }
 
-        public Vector Gravity { get; set; }
+        public double Gravity { get; set; }
 
         private bool _IsRunning;
         public bool IsRunning
@@ -86,10 +86,10 @@ namespace crystalgame
             return foundView != null ? foundView.DataContext as Entity : null;
         }
 
-        public static Vector GetGravity(FrameworkElement view)
+        public static double GetGravity(FrameworkElement view)
         {
             Guard.ArgumentNotNull(view, "view");
-            return (Vector)view.GetValue(GravityProperty);
+            return (double)view.GetValue(GravityProperty);
         }
 
         public static double GetSpeed(FrameworkElement view)
@@ -105,7 +105,7 @@ namespace crystalgame
             IsRunning = true;
         }
 
-        public static void SetGravity(FrameworkElement view, Vector value)
+        public static void SetGravity(FrameworkElement view, double value)
         {
             Guard.ArgumentNotNull(view, "view");
             view.SetValue(GravityProperty, value);
@@ -124,10 +124,12 @@ namespace crystalgame
         }
 
         public static readonly DependencyProperty GravityProperty
-            = DependencyProperty.RegisterAttached("Gravity", typeof(Vector), typeof(World));
+            = DependencyProperty.RegisterAttached(
+            "Gravity", typeof(double), typeof(World), new PropertyMetadata(980.0));
 
         public static readonly DependencyProperty SpeedProperty
-            = DependencyProperty.RegisterAttached("Speed", typeof(double), typeof(World));
+            = DependencyProperty.RegisterAttached(
+            "Speed", typeof(double), typeof(World), new PropertyMetadata(0.016));
 
         private void DoWork(object state)
         {

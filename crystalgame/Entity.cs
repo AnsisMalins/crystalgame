@@ -6,13 +6,14 @@ using Utilities;
 
 namespace crystalgame
 {
-    public class Entity
+    public class Entity : ViewModel
     {
         private FrameworkElement view;
 
         public Entity(FrameworkElement view)
         {
             Guard.ArgumentNotNull(view, "view");
+
             Size = new Vector(view.Width, view.Height);
             BoundingCircleRadiusSquared = Math.Pow(Math.Max(Size.X, Size.Y) / 2, 2);
             double left = Canvas.GetLeft(view);
@@ -20,6 +21,7 @@ namespace crystalgame
             double top = Canvas.GetTop(view);
             if (double.IsNaN(top)) top = 0;
             Position = new Vector(left + Size.X / 2, top + Size.Y / 2);
+            Velocity = GetVelocity(view);
 
             var rotateTransform = view.RenderTransform as RotateTransform;
             if (rotateTransform == null)
@@ -34,10 +36,10 @@ namespace crystalgame
                     }
                 }
             }
-            if (rotateTransform == null) rotateTransform = new RotateTransform(0, 0, 0);
+            if (rotateTransform == null) rotateTransform = new RotateTransform();
             view.RenderTransform = rotateTransform;
             view.RenderTransformOrigin = new Point(0.5, 0.5);
-            Angle = rotateTransform.Angle * Math.PI / 180;
+            Angle = -rotateTransform.Angle * Math.PI / 180;
         }
 
         public double Angle { get; set; }
@@ -60,10 +62,35 @@ namespace crystalgame
 
         public Vector Velocity { get; set; }
 
+        public static double AngleBetween(Vector v1, Vector v2)
+        {
+            return Vector.AngleBetween(v1, v2) * Math.PI / 180;
+        }
+
         public static bool AreNearby(Entity a, Entity b)
         {
+            if (a == null || b == null) return false;
             return (b.Position - a.Position).LengthSquared
                 - a.BoundingCircleRadiusSquared - b.BoundingCircleRadiusSquared <= 0;
+        }
+
+        public FrameworkElement CreateView()
+        {
+            var attr = Attribute.GetCustomAttribute(
+                GetType(), typeof(DefaultViewAttribute)) as DefaultViewAttribute;
+            if (attr == null) return null;
+            view = Activator.CreateInstance(attr.ViewType) as FrameworkElement;
+            if (view == null) return null;
+
+            view.Width = Size.X;
+            view.Height = Size.Y;
+            Canvas.SetLeft(view, Left);
+            Canvas.SetTop(view, Top);
+            view.RenderTransform = new RotateTransform(-Angle * 180 / Math.PI);
+            view.RenderTransformOrigin = new Point(0.5, 0.5);
+            view.DataContext = this;
+
+            return view;
         }
         
         public static double Direction(Vector v)
@@ -75,6 +102,7 @@ namespace crystalgame
 
         public static double Distance(Entity a, Entity b)
         {
+            if (a == null || b == null) return double.PositiveInfinity;
             double angle = Direction((b.Position - a.Position));
             double ra = EllipseRadius(a.Size, angle - a.Angle);
             double rb = EllipseRadius(b.Size, angle - b.Angle);
@@ -100,6 +128,12 @@ namespace crystalgame
             return (Vector)view.GetValue(VelocityProperty);
         }
 
+        public static Vector Normal(Vector v)
+        {
+            double length = v.Length;
+            return length > 0 ? v / length : v;
+        }
+
         public void Render()
         {
             Render(view);
@@ -115,25 +149,6 @@ namespace crystalgame
         {
             Guard.ArgumentNotNull(view, "view");
             view.SetValue(VelocityProperty, value);
-        }
-
-        public FrameworkElement CreateView()
-        {
-            var attr = Attribute.GetCustomAttribute(
-                GetType(), typeof(DefaultViewAttribute)) as DefaultViewAttribute;
-            if (attr == null) return null;
-            view = Activator.CreateInstance(attr.ViewType) as FrameworkElement;
-            if (view == null) return null;
-
-            view.Width = Size.X;
-            view.Height = Size.Y;
-            Canvas.SetLeft(view, Left);
-            Canvas.SetTop(view, Top);
-            view.RenderTransform = new RotateTransform(Angle * 180 / Math.PI);
-            view.RenderTransformOrigin = new Point(0.5, 0.5);
-            view.DataContext = this;
-
-            return view;
         }
 
         public virtual void Simulate(World world)

@@ -24,8 +24,7 @@ namespace crystalgame
         {
             Pegasus pegasus = world.Pegasus;
             if (pegasus == null) return;
-            if (leftKeyDown) 
-                pegasus.Angle += pegasus.Agility;
+            if (leftKeyDown) pegasus.Angle += pegasus.Agility;
             if (rightKeyDown) pegasus.Angle -= pegasus.Agility;
             pegasus.WingsSpread = spaceKeyDown;
         }

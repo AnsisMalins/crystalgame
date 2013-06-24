@@ -36,6 +36,7 @@ namespace crystalgame
         }
 
         public static readonly DependencyProperty BounceProperty
-            = DependencyProperty.RegisterAttached("Bounce", typeof(double), typeof(Cloud));
+            = DependencyProperty.RegisterAttached(
+            "Bounce", typeof(double), typeof(Cloud), new PropertyMetadata(1.0));
     }
 }

@@ -4,20 +4,33 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:crystalgame"
-             mc:Ignorable="d local"
+             mc:Ignorable="d"
              Width="2000" Height="1000">
-    <Canvas x:Name="World" Background="#bdeae5" local:World.Gravity="0,0.98" local:World.Speed="0.2">
+    <Canvas x:Name="World" Background="#bdeae5">
         <Rectangle Height="720" Canvas.Left="86" Canvas.Top="58" Width="1280"
                    StrokeDashArray="6" Stroke="Red" StrokeThickness="4"
-                   local:Entity.Type="local:Camera" local:Camera.Speed="0.1"/>
-        <Image Canvas.Left="153" Canvas.Top="347" Height="85" Width="168"
+                   local:Entity.Type="local:Camera"/>
+        <Image Canvas.Left="153" Canvas.Top="373" Height="85" Width="168"
                Source="assets/cloud.png"
-               local:Entity.Type="local:Cloud" local:Cloud.Bounce="0.1"/>
+               local:Entity.Type="local:Cloud"/>
         <Image Canvas.Left="193.969" Canvas.Top="218" Height="85" Width="168"
                Source="assets/cloud.png"
-               local:Entity.Type="local:Cloud" local:Cloud.Bounce="0.00005"/>
-        <Image Canvas.Left="1655.969" Canvas.Top="652.667" Height="73.184" Width="127.031"
+               local:Entity.Type="local:Cloud"/>
+        <Image Canvas.Left="379.969" Canvas.Top="347" Height="73.184" Width="127.031"
                Source="assets/dash.png"
-               local:Entity.Type="local:Pegasus"/>
+               local:Entity.Type="local:Pegasus" local:Entity.Velocity="1000,0"
+               RenderTransformOrigin="0.5,0.5"/>
+        <Image Canvas.Left="987" Canvas.Top="823" Height="85" Width="168"
+        	Source="assets/cloud.png"
+        	local:Entity.Type="{x:Type local:Cloud}"/>
+        <Image Canvas.Left="679" Canvas.Top="171" Height="85" Width="168"
+        	Source="assets/cloud.png"
+        	local:Entity.Type="{x:Type local:Cloud}"/>
+        <Image Canvas.Left="171" Canvas.Top="629" Height="85" Width="168"
+        	Source="assets/cloud.png"
+        	local:Entity.Type="{x:Type local:Cloud}"/>
+        <Image Canvas.Left="1257" Canvas.Top="277" Height="85" Width="168"
+        	Source="assets/cloud.png"
+        	local:Entity.Type="{x:Type local:Cloud}"/>
     </Canvas>
 </UserControl>

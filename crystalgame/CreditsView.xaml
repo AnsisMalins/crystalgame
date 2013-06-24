@@ -5,6 +5,9 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" d:DesignHeight="360" d:DesignWidth="640">
     <Grid>
-        <TextBlock Text="Ansis and Ziara" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="Game by @AnsisMalins and Ziara" Foreground="White" TextAlignment="Center"/>
+            <TextBlock Text="Icon by @judacris, used without permission" Foreground="White" TextAlignment="Center"/>
+        </StackPanel>
     </Grid>
 </UserControl>

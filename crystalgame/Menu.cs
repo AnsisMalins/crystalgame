@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Windows;
 using System.Windows.Data;
 using System.Windows.Input;
@@ -42,7 +43,7 @@ namespace crystalgame
         public void Credits()
         {
             IsVisible = false;
-            DisposeWorld();
+            DestroyScene();
             window.World.Content = new CreditsView();
         }
 
@@ -54,41 +55,38 @@ namespace crystalgame
         public void NewGame()
         {
             IsVisible = false;
-            DisposeWorld();
+            DestroyScene();
             var levelView = new LevelView();
             world = new World(levelView.World);
             world.Player = new Player(window);
             window.World.Content = levelView;
             world.Start();
-            BindingOperations.SetBinding(window, Window.TitleProperty, new Binding("Fps")
+            OnPropertyChanged("CanContinue");
+
+            if (Debugger.IsAttached) BindingOperations.SetBinding(
+                window, Window.TitleProperty, new Binding("Fps")
             {
                 Source = world,
                 Converter = ValueConverters.FormatString,
-                ConverterParameter = "Simulation FPS: {0}"
+                ConverterParameter = "{0} FPS"
             });
-            OnPropertyChanged("CanContinue");
         }
 
         public void Tutorial()
         {
             IsVisible = false;
-            DisposeWorld();
+            DestroyScene();
             window.World.Content = new TutorialView();
         }
 
-        private void DisposeWorld()
+        private void DestroyScene()
         {
             if (world != null)
             {
                 world.Dispose();
                 world = null;
             }
-            var disposable = window.World.Content as IDisposable;
-            if (disposable != null)
-            {
-                disposable.Dispose();
-                window.World.Content = null;
-            }
+            window.World.Content = null;
         }
 
         private void window_KeyDown(object sender, KeyEventArgs e)
