@@ -17,6 +17,10 @@ namespace crystalgame
             Drag = GetDrag(view);
             Lift = GetLift(view);
             MaxSpeed = GetMaxSpeed(view);
+
+            Matrix m = Matrix.Identity;
+            m.Rotate(-Angle * 180 / Math.PI);
+            Velocity *= m;
         }
 
         public double Agility { get; set; }
@@ -96,6 +100,9 @@ namespace crystalgame
             Vector fDragX = -uFw * vFw * Math.Abs(vFw) * Drag.X;
             Vector fDragY = uUp * vUp * Math.Abs(vUp) * Drag.Y;
             Vector fDrag = fDragX + fDragY;
+            // Sanity clamping.
+            if (fDrag.LengthSquared > Velocity.LengthSquared)
+                fDrag = Normal(fDrag) * Velocity.Length;
 
             Vector fGravity = new Vector(0, world.Gravity);
 
@@ -104,12 +111,12 @@ namespace crystalgame
             Velocity += (fDrag + fGravity + fLift) * world.Speed;
 
             // Sanity clamping.
-            Velocity = new Vector(
+            /*Velocity = new Vector(
                 double.IsNaN(Velocity.X) ? 0 : Velocity.X,
                 double.IsNaN(Velocity.Y) ? 0 : Velocity.Y);
             Velocity = new Vector(
                 Math.Min(Math.Max(Velocity.X, -MaxSpeed), MaxSpeed),
-                Math.Min(Math.Max(Velocity.Y, -MaxSpeed), MaxSpeed));
+                Math.Min(Math.Max(Velocity.Y, -MaxSpeed), MaxSpeed));*/
 
             Position += Velocity * world.Speed;
 
