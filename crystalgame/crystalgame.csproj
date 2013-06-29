@@ -57,6 +57,10 @@
       <DependentUpon>CreditsView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Entity.cs" />
+    <Compile Include="Hoop.cs" />
+    <Compile Include="HoopView.xaml.cs">
+      <DependentUpon>HoopView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="HudView.xaml.cs">
       <DependentUpon>HudView.xaml</DependentUpon>
     </Compile>
@@ -82,6 +86,10 @@
     <Page Include="CreditsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HoopView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="HudView.xaml">
       <SubType>Designer</SubType>

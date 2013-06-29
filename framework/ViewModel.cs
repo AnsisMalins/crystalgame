@@ -7,11 +7,6 @@ namespace Utilities
 {
     public abstract class ViewModel : INotifyPropertyChanged
     {
-        public virtual Type View
-        {
-            get { return null; }
-        }
-
         public event PropertyChangedEventHandler PropertyChanged = delegate { };
 
         protected void OnPropertyChanged()
