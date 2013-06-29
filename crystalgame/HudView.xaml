@@ -6,6 +6,13 @@
              mc:Ignorable="d"
              d:DesignHeight="360" d:DesignWidth="640">
     <Grid>
-            
+        <Grid HorizontalAlignment="Left" VerticalAlignment="Top" TextBlock.FontSize="30" TextBlock.FontWeight="Bold" Margin="15, 5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Score:"/>
+            <TextBlock x:Name="Score" Grid.Column="1"/>
+        </Grid>
     </Grid>
 </UserControl>

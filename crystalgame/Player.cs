@@ -4,11 +4,12 @@ using Utilities;
 namespace crystalgame
 {
     [DefaultView(typeof(HudView))]
-    public class Player
+    public class Player : ViewModel
     {
         private bool leftKeyDown;
         private bool rightKeyDown;
         private bool spaceKeyDown;
+        private int oldScore;
 
         public Player(MainWindow window)
         {
@@ -17,8 +18,15 @@ namespace crystalgame
             window.KeyUp += window_KeyUp;
         }
 
+        public int Score { get; set; } 
+
         public void Render()
         {
+            if (Score > oldScore)
+            {
+                OnPropertyChanged("Score");
+                oldScore = Score;
+            }
         }
 
         public void Simulate(World world)
