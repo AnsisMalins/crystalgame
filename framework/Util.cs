@@ -1,6 +1,5 @@
 ﻿using System;
 using System.ComponentModel;
-using System.Diagnostics;
 using System.Text;
 using System.Windows;
 
@@ -27,29 +26,6 @@ namespace Utilities
                 obj.Dispose();
                 obj = default(T);
             }
-        }
-
-        public static string GetCallerName()
-        {
-            return GetCallerName(1);
-        }
-
-        public static string GetCallerName(int skipFrames)
-        {
-            string name = new StackFrame(skipFrames + 1).GetMethod().Name;
-            if (name.StartsWith("get_") || name.StartsWith("set_"))
-                name = name.Substring(4);
-            return name;
-        }
-
-        public static string GetCallerTypeName()
-        {
-            return GetCallerTypeName(1);
-        }
-
-        public static string GetCallerTypeName(int skipFrames)
-        {
-            return new StackFrame(skipFrames + 1).GetMethod().DeclaringType.Name;
         }
 
         private static bool? _IsInDesignMode;

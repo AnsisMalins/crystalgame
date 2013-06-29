@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel;
-using System.Diagnostics;
 
 namespace Utilities
 {
@@ -9,27 +7,18 @@ namespace Utilities
     {
         public event PropertyChangedEventHandler PropertyChanged = delegate { };
 
-        /*protected void OnPropertyChanged()
-        {
-            string callerName = new StackFrame(1).GetMethod().Name;
-            if (!callerName.StartsWith("set_")) throw new InvalidOperationException();
-            OnPropertyChanged(callerName.Substring(4));
-        }*/
-
         protected void OnPropertyChanged(string propertyName)
         {
             var e = new PropertyChangedEventArgs(propertyName);
             Exec.OnMain(() => PropertyChanged(this, e));
         }
 
-        /*protected bool Set<T>(ref T field, T value)
+        protected bool Set<T>(string propertyName, ref T field, T value)
         {
             if (EqualityComparer<T>.Default.Equals(field, value)) return false;
             field = value;
-            string callerName = new StackFrame(1).GetMethod().Name;
-            if (!callerName.StartsWith("set_")) throw new InvalidOperationException("Caller must begin with set_, but is " + callerName);
-            OnPropertyChanged(callerName.Substring(4));
+            OnPropertyChanged(propertyName);
             return true;
-        }*/
+        }
     }
 }

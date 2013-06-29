@@ -34,14 +34,10 @@ namespace crystalgame
             get { return _IsVisible; }
             set
             {
-                if (_IsVisible != value)
-                {
-                    _IsVisible = value;
-                    OnPropertyChanged("IsVisible");
-                    window.World.IsEnabled = !_IsVisible;
-                    if (world != null) world.IsRunning = !_IsVisible;
-                    if (_IsVisible) Focus();
-                }
+                if (!Set("IsVisible", ref _IsVisible, value)) return;
+                window.World.IsEnabled = !_IsVisible;
+                if (world != null) world.IsRunning = !_IsVisible;
+                if (_IsVisible) Focus();
             }
         }
 

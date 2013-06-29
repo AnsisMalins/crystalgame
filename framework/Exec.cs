@@ -14,7 +14,7 @@ namespace Utilities
         public static void Initialize(ISynchronizeInvoke control)
         {
             Guard.ArgumentNotNull(control, "control");
-            Guard.ObjectNotInitialized(initialized);
+            if (initialized) throw new AlreadyInitializedException("Exec");
             mainThread = (method) => control.BeginInvoke(method, null);
             Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
             initialized = true;
@@ -23,7 +23,7 @@ namespace Utilities
         public static void Initialize(Dispatcher dispatcher)
         {
             Guard.ArgumentNotNull(dispatcher, "dispatcher");
-            Guard.ObjectNotInitialized(initialized);
+            if (initialized) throw new AlreadyInitializedException("Exec");
             mainThread = (method) => dispatcher.BeginInvoke(DispatcherPriority.Normal, method);
             Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
             initialized = true;
@@ -32,13 +32,14 @@ namespace Utilities
         public static void OnMain(Action method)
         {
             Guard.ArgumentNotNull(method, "method");
-            Guard.ObjectInitialized(initialized);
+            if (!initialized) throw new NotInitializedException("Exec");
             mainThread(method);
         }
 
         public static void OnPool(Action method)
         {
             Guard.ArgumentNotNull(method, "method");
+            if (!initialized) throw new NotInitializedException("Exec");
             ThreadPool.QueueUserWorkItem((state) =>
             {
                 Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
@@ -50,7 +51,7 @@ namespace Utilities
         {
             Guard.ArgumentNotNull(method, "method");
             Guard.ArgumentNotNull(callback, "callback");
-            Guard.ObjectInitialized(initialized);
+            if (!initialized) throw new NotInitializedException("Exec");
             OnPool(() =>
             {
                 method();
@@ -62,7 +63,7 @@ namespace Utilities
         {
             Guard.ArgumentNotNull(method, "method");
             Guard.ArgumentNotNull(callback, "callback");
-            Guard.ObjectInitialized(initialized);
+            if (!initialized) throw new NotInitializedException("Exec");
             OnPool(() =>
             {
                 T result = method();

@@ -20,20 +20,5 @@ namespace Utilities
                 argumentName + " is " + argumentType.Name + ", but " + baseType.Name + " expected",
                 argumentName);
         }
-
-        public static void ObjectInitialized(bool initialized)
-        {
-            if (!initialized) throw new NotInitializedException(Util.GetCallerTypeName(1));
-        }
-
-        public static void ObjectNotDisposed(bool disposed)
-        {
-            if (disposed) throw new ObjectDisposedException(Util.GetCallerTypeName(1));
-        }
-
-        public static void ObjectNotInitialized(bool initialized)
-        {
-            if (initialized) throw new AlreadyInitializedException(Util.GetCallerTypeName(1));
-        }
     }
 }
