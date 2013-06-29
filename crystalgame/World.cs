@@ -69,11 +69,8 @@ namespace crystalgame
             get { return _IsRunning; }
             set
             {
-                if (_IsRunning != value)
-                {
-                    _IsRunning = value;
-                    if (_IsRunning) Start(); else Stop();
-                }
+               if (!Set("IsRunning", ref _IsRunning, value)) return;
+               if (_IsRunning) Start(); else Stop();
             }
         }
 

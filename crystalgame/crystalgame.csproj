@@ -185,14 +185,11 @@
     <Resource Include="assets\cloud.png" />
     <Resource Include="assets\cloudringback.png" />
     <Resource Include="assets\cloudringfront.png" />
-    <Resource Include="assets\sign.png" />
-    <Resource Include="assets\signhelpful.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="assets\dash.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="assets\di-KXA8.png" />
     <Resource Include="assets\grassback.png" />
     <Resource Include="assets\grassmiddle.png" />
     <Resource Include="assets\hoers.jpg" />

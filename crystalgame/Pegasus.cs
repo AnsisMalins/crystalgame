@@ -29,12 +29,7 @@ namespace crystalgame
         public bool IsFacingLeft
         {
             get { return _IsFacingLeft; }
-            set
-            {
-                if (_IsFacingLeft == value) return;
-                _IsFacingLeft = value;
-                OnPropertyChanged("IsFacingLeft");
-            }
+            set { Set("IsFacingLeft", ref _IsFacingLeft, value); }
         }
 
         public double Lift { get; set; }
